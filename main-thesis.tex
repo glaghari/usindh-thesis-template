@@ -1,0 +1,107 @@
+\documentclass[12pt, a4paper, oneside]{book}
+
+%-----------------------------------------------------------------------------------------------%
+%                               Change following accordingly
+%-----------------------------------------------------------------------------------------------%
+
+%% Thesis details including title, author, year, subject, and the department where thesis work has been carried out.
+\def\department{Institute of Mathematics and Computer Science}
+\def\university{University of Sindh, Jamshoro}
+\def\degreeSubject{Computer Science}
+%\def\thesisType{M.Phil.}
+%\def\degree{Master of Philosophy}
+\def\thesisType{Ph.D.}
+\def\degree{Doctor of Philosophy}
+\def\thesisSubmissionYear{2022}
+\def\thesisTitle{Thesis title goes here}
+\def\thesisAuthor{Candidate Name}
+
+\input{settings/predefined}
+\input{settings/userdefined}
+
+
+\makeindex
+\begin{document}
+
+%-----------------------------------------------------------------------------------------------%
+%                               Front pages
+%-----------------------------------------------------------------------------------------------%
+
+\frontmatter
+
+\input{pages/firstpage}
+
+\pagenumbering{Roman}
+
+\input{pages/certificate}
+\input{pages/dedication}
+\input{pages/acknowledgments}
+\input{pages/declaration}
+
+\setcounter{tocdepth}{2}% 2 levels of section in toc. Show Section and SubSection headings in table of contents
+\setcounter{secnumdepth}{3}% Number subsubsection headings. By default they are not numbered.
+
+\renewcommand*\contentsname{}
+\makeheading{CONTENTS}
+\vspace{-2cm}
+
+\tableofcontents
+\clearpage
+
+\renewcommand*\listfigurename{}
+\makeheading{LIST OF FIGURES}
+\vspace{-2cm}
+\listoffigures
+\clearpage
+
+\renewcommand*\listtablename{}
+\makeheading{LIST OF TABLES}
+\vspace{-2cm}
+\listoftables
+\cleardoublepage
+
+\input{pages/glossary}
+\input{pages/abstract}
+
+%-----------------------------------------------------------------------------------------------%
+%                               Chapters
+%-----------------------------------------------------------------------------------------------%
+
+\mainmatter
+\pagenumbering{arabic} 
+
+\pagestyle{mainStyle}
+
+%% Chapter 1
+\input{chapters/chapter1/main}
+
+%% Chapter 2
+\input{chapters/chapter2/main}
+
+
+%-----------------------------------------------------------------------------------------------%
+%                               Appendices
+%-----------------------------------------------------------------------------------------------%
+
+\appendix
+\renewcommand{\chaptername}{Appendix}
+\appendixformat
+
+\input{appendices/appendix_a}
+
+%-----------------------------------------------------------------------------------------------%
+%                               References
+%-----------------------------------------------------------------------------------------------%
+
+% %For social science and Business.
+%\bibliographystyle{apalike}
+
+% %For For Science, Technology, Engineering,  and Mathematics (STEM).
+\bibliographystyle{ieeetr}
+
+\renewcommand\bibname{REFERENCES}
+\bibliography{references/main}
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+
+\end{document}

@@ -1,0 +1,70 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                DO NOT CHANGE THIS FILE                  %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\logoUniName{UNIVERSITY OF SINDH, JAMSHORO}
+%\newcommand{\logoUniName}{\MakeUppercase\university}
+\pagestyle{empty}
+
+\begin{titlepage}
+
+\vspace{2in}
+
+\begin{tikzpicture}
+\fill [white](0,0) circle (1cm);
+\end{tikzpicture}
+
+%% For empty space above the uni name text
+\begin{center}
+\begin{tikzpicture}
+\fontfamily{qpl}\fontsize{15}{18}\selectfont
+
+\draw[decoration={
+            text along path,
+            text={|\fontfamily{qpl}\fontsize{20}{24}\selectfont\bfseries| \logoUniName},
+            text align={center},
+            raise=2cm},
+            decorate] (0,0) arc (180:2:5); 
+\end{tikzpicture}
+\end{center}
+\vspace{-2in}
+\begin{center}
+\begin{tikzpicture}
+%\fill [white](0,0) circle (1cm); % For empty space to move the logo to right
+\end{tikzpicture}
+\includegraphics[width=2.5in]{settings/Logo-Colored.jpg}
+\end{center}
+
+\centering{\Large\bfseries \thesisType~Thesis}
+
+\vspace{1.5cm}
+\large{\bfseries\LARGE\thesisTitle}
+
+\vspace{1.5cm}
+
+\LARGE{\bfseries\MakeUppercase\thesisAuthor}
+
+\vspace{1cm}
+
+\begin{center}
+
+\fontsize{10}{12}\selectfont\bfseries
+\MakeUppercase{
+Thesis submitted towards the partial fulfilment of the requirement of the University of Sindh for the award of~\degree~degree in~\degreeSubject
+}
+\end{center}
+
+
+\vspace*{\fill}
+
+\begin{center}
+\large\bfseries
+\department \\
+\university \\
+\thesisSubmissionYear\\
+\end{center}
+
+\end{titlepage}
+\clearpage
+%\cleardoublepage
